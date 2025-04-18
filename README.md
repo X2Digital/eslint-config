@@ -1,4 +1,4 @@
-# eslint-config-x2d
+# @x2d/eslint-config
 
 Custom ESLint configuration used by the X2D company for maintaining code quality and consistency across all JavaScript/TypeScript and Vue projects.
 
@@ -13,13 +13,13 @@ Custom ESLint configuration used by the X2D company for maintaining code quality
 ## Installation
 
 ```bash
-npm install --save-dev eslint eslint-config-x2d eslint-plugin-prettier eslint-plugin-sort-imports-es6-autofix
+npm install --save-dev @x2d/eslint-config
 ```
 
 Or with `pnpm`:
 
 ```bash
-pnpm add -D eslint eslint-config-x2d eslint-plugin-prettier eslint-plugin-sort-imports-es6-autofix
+pnpm add -D eslint @x2d/eslint-config
 ```
 
 ## Usage
