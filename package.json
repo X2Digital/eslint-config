@@ -1,18 +1,25 @@
 {
   "name": "@x2d/eslint-config",
-  "version": "1.0.0",
-  "main": "eslint.config.mjs",
-  "types": "eslint.config.d.ts",
-  "files": [
-    "eslint.config.mjs",
-    "eslint.config.d.ts"
-  ],
+  "version": "1.1.2",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    "types": "./dist/index.d.ts",
+    "require": "./dist/index.cjs",
+    "import": "./dist/index.js"
+  },
   "description": "",
   "license": "ISC",
   "author": "",
   "type": "module",
   "scripts": {
-    "publish": "npm publish --access public"
+    "build": "tsup src/index.ts --dts --format esm,cjs --target node18",
+    "lint": "eslint src --ext .ts,.tsx",
+    "typecheck": "tsc --noEmit",
+    "test": "jest",
+    "prepublishOnly": "npm run build",
+    "release": "npm publish --access public"
   },
   "devDependencies": {
     "@eslint/js": "^9.23.0",
@@ -20,9 +27,8 @@
     "eslint-plugin-prettier": "^5.2.5",
     "eslint-plugin-sort-imports-es6-autofix": "^0.6.0",
     "globals": "^16.0.0",
-    "typescript-eslint": "^8.28.0"
-  },
-  "dependencies": {
+    "tsup": "^8.4.0",
+    "typescript-eslint": "^8.28.0",
     "prettier": "^3.5.3"
   }
 }
