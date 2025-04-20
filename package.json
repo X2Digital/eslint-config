@@ -10,8 +10,8 @@
     "import": "./dist/index.js"
   },
   "description": "",
-  "license": "ISC",
-  "author": "",
+  "license": "MIT",
+  "author": "Diego F Lamarão",
   "type": "module",
   "scripts": {
     "build": "tsup src/index.ts --dts --format esm,cjs --target node18",
